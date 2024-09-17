@@ -1,0 +1,25 @@
+<html>
+<head>
+ <title>TAREA VIRTUAL # 2 </title>
+</head>
+<body>
+ <h3>CALCULOS DE SUELDOS</h3>
+ <h1>SUELDOS POR HORAS</h1>
+ <form name="calculo">
+ Ingrese el nombre: <input name="nom" value=""><br><br>
+ Ingrese el cargo: <input name="car" value=""><br><br>
+ Ingrese las horas trabajadas: <input name="ht" value="0"><br><br>
+ Ingrese el sueldo por hora: <input name="sh" value="0"><br><br>
+ <script>
+ function proceso() {
+ document.calculo.shr.value = eval(document.calculo.ht.value) * eval(document.calculo.sh.value);
+ if (document.calculo.shr.value < 200)
+ document.calculo.shr.value = eval(document.calculo.shr.value) + 50;
+ }
+ </script>
+ <input type="button" name="Boton" value="CALCULAR" onclick="proceso()"><br><br>
+ El salario neto a recibir es: <input name="shr" value="0"> <br><br>
+ <input type="reset" value="LIMPIAR">
+ </form>
+ </body>
+ </html>
